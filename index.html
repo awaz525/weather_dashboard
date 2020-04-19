@@ -25,11 +25,11 @@
         </div>
         <div class="current_box">
             <div class="sunrise_box">
-                <div class="sunrise_icon"></div>
+                <div class="up_arrow"></div>
                 <div class="sunrise_time"></div>
             </div>
             <div class="sunset_box">
-                <div class="sunset_icon"></div>
+                <div class="down_arrow"></div>
                 <div class="sunset_time"></div>
             </div>
             <div class="current_temperature_box">
@@ -40,7 +40,6 @@
                     <p>{{time.hour_12}}:{{time.minute}} {{time.ampm}}</p>
                 </div>
                 <div class="current_description">{{current.description_main}}</div>
-                <div v-bind:class="'icon_'+forecast[1].description_icon" class="icon"></div>
             </div>
             <div class="icon icon_01d">{{current.description_icon}}</div>
             <div class="current_detail">
