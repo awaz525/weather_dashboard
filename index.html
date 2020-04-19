@@ -4,137 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <script src="keys.js"></script>
+
+    <script
+      src="https://unpkg.com/@warnick/forecast-js/js/forecast.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@warnick/forecast-js/css/forecast.css"
+    />
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/ory1etx.css">
 </head>
 <body>
-    <div class="header">
-        <div class="search_icon"></div>
-        <input placeholder="Search Location" name="name" class="underline" id="zip">
-    </div>
-    <div class="current_box">
-        <div class="sunrise_box">
-            <div class="sunrise_icon"></div>
-            <div class="sunrise_time"></div>
+    <div class="results" id="app">
+        <div class="header">
+            <div class="search_icon"></div>
+            <input placeholder="Search ZIP" v-on:input="zip_trigger" name="name" class="underline" id="zip">
         </div>
-        <div class="sunset_box">
-            <div class="sunset_icon"></div>
-            <div class="sunset_time"></div>
-        </div>
-        <div class="current_temperature_box">
-            <div class="current_temperature">24<span class="super">°C</span></div>
-            <div class="location">Manhattan, Kansas</div>
-            <div class="current_date_time">Sat 28 March 5:08 pm</div>
-            <div class="current_description">Clear</div>
-        </div>
-        <div class="icon icon_01d"></div>
-        <div class="current_high">
-            <div class="high">High</div>
-            <div class="high_number">25°</div>
-        </div>
-        <div class="current_humidity">
-            <div class="humidity">Humidity</div>
-            <div class="humidity_number">80%</div>
-        </div>
-        <div class="current_precipitation">
-            <div class="precipitation">Precipitation</div>
-            <div class="precipitation_number">10%</div>
-        </div>
-        <div class="current_low">
-            <div class="low">Low</div>
-            <div class="low_number">15°</div>
-        </div>
-    </div>
-    <div class="daily_box">
-        <div class="title1">Next 3 Days</div>
-        <div class="day1_box">
-            <div class="day">Sunday</div>
-            <div class="precipitation2">
-                <div class="icon icon_09d"></div>
-                <div class="description">Showers</div>
-                <div class="raindrop_icon"></div>
-                <div class="precipitation2_chance">80%</div>
+        <div class="current_box">
+            <div class="sunrise_box">
+                <div class="sunrise_icon"></div>
+                <div class="sunrise_time"></div>
             </div>
-            <div class="high">High</div>
-            <div class="humidity">Humidity</div>
-            <div class="low">Low</div>
-        </div>
-        <div class="day2_box">
-            <div class="day"></div>
-            <div class="precipitation2">
-                <div class="icon"></div>
-                <div class="description"></div>
-                <div class="raindrop_icon"></div>
-                <div class="precipitation2_chance"></div>
+            <div class="sunset_box">
+                <div class="sunset_icon"></div>
+                <div class="sunset_time"></div>
             </div>
-            <div class="high"></div>
-            <div class="humidity"></div>
-            <div class="low"></div>
-        </div>
-        <div class="day3_box">
-            <div class="day"></div>
-            <div class="precipitation2">
-                <div class="icon"></div>
-                <div class="description"></div>
-                <div class="raindrop_icon"></div>
-                <div class="precipitation2_chance"></div>
+            <div class="current_temperature_box">
+                <div class="current_temperature">24<span class="super">°C</span></div>
+                <div class="location">Manhattan, Kansas</div>
+                <div class="current_date_time">Sat 28 March 5:08 pm</div>
+                <div class="current_description">Clear</div>
             </div>
-            <div class="high"></div>
-            <div class="humidity"></div>
-            <div class="low"></div>
+            <div class="icon icon_01d"></div>
+            <div class="current_detail">
+                <div class="current_high">
+                    <div class="high">High</div>
+                    <div class="high_number">25°</div>
+                </div>
+                <div class="current_humidity">
+                    <div class="humidity">Humidity</div>
+                    <div class="humidity_number">80%</div>
+                </div>
+                <div class="current_precipitation">
+                    <div class="precipitation">Precipitation</div>
+                    <div class="precipitation_number">10%</div>
+                </div>
+                <div class="current_low">
+                    <div class="low">Low</div>
+                    <div class="low_number">15°</div>
+                </div>
+            </div>
+        </div>
+        <div class="daily_box">
+            <div class="title1">Next 3 Days</div>
+            <div class="day1_box">
+                <div class="day">Sunday</div>
+                <div class="precipitation2">
+                    <div class="icon icon_09d"></div>
+                    <div class="description">Showers</div>
+                    <div class="raindrop_icon"></div>
+                    <div class="precipitation2_chance">80%</div>
+                </div>
+                <div class="detail1">
+                    <div class="high_forecast">
+                        <div class="high">High</div>
+                        <div class="high_number">15°</div>
+                    </div>
+                    <div class="humidity_forecast">
+                        <div class="humidity">Humidity</div>
+                        <div class="humidity_number">60%</div>
+                    </div>
+                    <div class="low_forecast">
+                        <div class="low">High</div>
+                        <div class="low_number">10°</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day2_box">
+                <div class="day">Monday</div>
+                <div class="precipitation2">
+                    <div class="icon icon_03d"></div>
+                    <div class="description">Cloudy</div>
+                    <div class="raindrop_icon"></div>
+                    <div class="precipitation2_chance">20%</div>
+                </div>
+                <div class="detail2">
+                    <div class="high_forecast">
+                        <div class="high">High</div>
+                        <div class="high_number">20°</div>
+                    </div>
+                    <div class="humidity_forecast">
+                        <div class="humidity">Humidity</div>
+                        <div class="humidity_number">20%</div>
+                    </div>
+                    <div class="low_forecast">
+                        <div class="low">High</div>
+                        <div class="low_number">13°</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day3_box">
+                <div class="day">Tuesday</div>
+                <div class="precipitation2">
+                    <div class="icon icon_13d"></div>
+                    <div class="description">Snow</div>
+                    <div class="raindrop_icon"></div>
+                    <div class="precipitation2_chance">10%</div>
+                </div>
+                <div class="detail3">
+                    <div class="high_forecast">
+                        <div class="high">High</div>
+                        <div class="high_number">-1°</div>
+                    </div>
+                    <div class="humidity_forecast">
+                        <div class="humidity">Humidity</div>
+                        <div class="humidity_number">5%</div>
+                    </div>
+                    <div class="low_forecast">
+                        <div class="low">High</div>
+                        <div class="low_number">-10°</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hourly_box">
+            <div class="title2">Hourly</div>
+            <div class="hourly_grid">
+                <div class="hour1">
+                    <div class="icon icon_01n"></div>
+                    <div class="description">Clear</div>
+                    <div class="time">12AM</div>
+                    <div class="temperature">15°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">10%</div>
+                </div>
+                <div class="hour4">
+                    <div class="icon icon_01n"></div>
+                    <div class="description">Clear</div>
+                    <div class="time">4AM</div>
+                    <div class="temperature">17°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">10%</div>
+                </div>
+                <div class="hour8">
+                    <div class="icon icon_01d"></div>
+                    <div class="description">Clear</div>
+                    <div class="time">8AM</div>
+                    <div class="temperature">20°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">10%</div>
+                </div>
+                <div class="hour12">
+                    <div class="icon icon_01d"></div>
+                    <div class="description">Clear</div>
+                    <div class="time">12PM</div>
+                    <div class="temperature">24°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">10%</div>
+                </div>
+                <div class="hour16">
+                    <div class="icon icon_01d"></div>
+                    <div class="description">Clear</div>
+                    <div class="time">4PM</div>
+                    <div class="temperature">25°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">10%</div>
+                </div>
+                <div class="hour20">
+                    <div class="icon icon_01n"></div>
+                    <div class="description">Clear</div>
+                    <div class="time">8PM</div>
+                    <div class="temperature">18°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">10%</div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="hourly_box">
-        <div class="title2">Hourly</div>
-        <div class="12am_box">
-            <div class="icon2"></div>
-            <div class="description"></div>
-            <div class="time"></div>
-            <div class="temperature"></div>
-            <div class="raindrop_icon2"></div>
-            <div class="precipitation3_chance"></div>
-        </div>
-        <div class="4am_box">
-            <div class="icon2"></div>
-            <div class="description"></div>
-            <div class="time"></div>
-            <div class="temperature"></div>
-            <div class="raindrop_icon2"></div>
-            <div class="precipitation3_chance"></div>
-        </div>
-        <div class="8am_box">
-            <div class="icon2"></div>
-            <div class="description"></div>
-            <div class="time"></div>
-            <div class="temperature"></div>
-            <div class="raindrop_icon2"></div>
-            <div class="precipitation3_chance"></div>
-        </div>
-        <div class="12pm_box">
-            <div class="icon2"></div>
-            <div class="description"></div>
-            <div class="time"></div>
-            <div class="temperature"></div>
-            <div class="raindrop_icon2"></div>
-            <div class="precipitation3_chance"></div>
-        </div>
-        <div class="4pm_box">
-            <div class="icon2"></div>
-            <div class="description"></div>
-            <div class="time"></div>
-            <div class="temperature"></div>
-            <div class="raindrop_icon2"></div>
-            <div class="precipitation3_chance"></div>
-        </div>
-        <div class="8pm_box">
-            <div class="icon2"></div>
-            <div class="description"></div>
-            <div class="time"></div>
-            <div class="temperature"></div>
-            <div class="raindrop_icon2"></div>
-            <div class="precipitation3_chance"></div>
-        </div>
-    </div>
-    
 </body>
 </html>
