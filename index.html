@@ -33,20 +33,24 @@
                 <div class="sunset_time"></div>
             </div>
             <div class="current_temperature_box">
-                <div class="current_temperature">24<span class="super">°C</span></div>
-                <div class="location">Manhattan, Kansas</div>
-                <div class="current_date_time">Sat 28 March 5:08 pm</div>
-                <div class="current_description">Clear</div>
+                <div class="current_temperature">{{current.temp.current}}<span class="super">°F</span></div>
+                <div class="location">{{city}}, {{location.state}}</div>
+                <div class="current_date_time">
+                    <p>{{time.date}}</p>
+                    <p>{{time.hour_12}}:{{time.minute}} {{time.ampm}}</p>
+                </div>
+                <div class="current_description">{{current.description_main}}</div>
+                <div v-bind:class="'icon_'+forecast[1].description_icon" class="icon"></div>
             </div>
-            <div class="icon icon_01d"></div>
+            <div class="icon icon_01d">{{current.description_icon}}</div>
             <div class="current_detail">
                 <div class="current_high">
                     <div class="high">High</div>
-                    <div class="high_number">25°</div>
+                    <div class="high_number">{{current.temp.high}}°</div>
                 </div>
                 <div class="current_humidity">
                     <div class="humidity">Humidity</div>
-                    <div class="humidity_number">80%</div>
+                    <div class="humidity_number">{{current.humidity}}%</div>
                 </div>
                 <div class="current_precipitation">
                     <div class="precipitation">Precipitation</div>
@@ -54,78 +58,78 @@
                 </div>
                 <div class="current_low">
                     <div class="low">Low</div>
-                    <div class="low_number">15°</div>
+                    <div class="low_number">{{current.temp.low}}°</div>
                 </div>
             </div>
         </div>
         <div class="daily_box">
             <div class="title1">Next 3 Days</div>
             <div class="day1_box">
-                <div class="day">Sunday</div>
+                <div class="day">{{forecast[1].weekday}}</div>
                 <div class="precipitation2">
-                    <div class="icon icon_09d"></div>
-                    <div class="description">Showers</div>
+                    <div class="icon icon_09d">{{forecast[1].description_icon}}</div>
+                    <div class="description">{{ forecast[1].weather.description }}</div>
                     <div class="raindrop_icon"></div>
-                    <div class="precipitation2_chance">80%</div>
+                    <div class="precipitation2_chance">{{forecast[1].precip}}%</div>
                 </div>
                 <div class="detail1">
                     <div class="high_forecast">
                         <div class="high">High</div>
-                        <div class="high_number">15°</div>
+                        <div class="high_number">{{forecast[1].max_temp}}°</div>
                     </div>
                     <div class="humidity_forecast">
                         <div class="humidity">Humidity</div>
-                        <div class="humidity_number">60%</div>
+                        <div class="humidity_number">{{forecast[1].humidity}}%</div>
                     </div>
                     <div class="low_forecast">
                         <div class="low">High</div>
-                        <div class="low_number">10°</div>
+                        <div class="low_number">{{forecast[1].min_temp}}°</div>
                     </div>
                 </div>
             </div>
             <div class="day2_box">
-                <div class="day">Monday</div>
+                <div class="day">{{forecast[2].weekday}}</div>
                 <div class="precipitation2">
-                    <div class="icon icon_03d"></div>
-                    <div class="description">Cloudy</div>
+                    <div class="icon icon_03d">{{forecast[2].description_icon}}</div>
+                    <div class="description">{{ forecast[2].weather.description }}</div>
                     <div class="raindrop_icon"></div>
-                    <div class="precipitation2_chance">20%</div>
+                    <div class="precipitation2_chance">{{forecast[2].precip}}%</div>
                 </div>
                 <div class="detail2">
                     <div class="high_forecast">
                         <div class="high">High</div>
-                        <div class="high_number">20°</div>
+                        <div class="high_number">{{forecast[2].max_temp}}°</div>
                     </div>
                     <div class="humidity_forecast">
                         <div class="humidity">Humidity</div>
-                        <div class="humidity_number">20%</div>
+                        <div class="humidity_number">{{forecast[2].humidity}}%</div>
                     </div>
                     <div class="low_forecast">
                         <div class="low">High</div>
-                        <div class="low_number">13°</div>
+                        <div class="low_number">{{forecast[2].min_temp}}°</div>
                     </div>
                 </div>
             </div>
             <div class="day3_box">
-                <div class="day">Tuesday</div>
+                <div class="day">{{forecast[3].weekday}}</div>
                 <div class="precipitation2">
-                    <div class="icon icon_13d"></div>
-                    <div class="description">Snow</div>
+                    <div class="icon icon_13d">{{forecast[3].description_icon}}</div>
+                    <div class="description">{{ forecast[3].weather.description }}</div>
                     <div class="raindrop_icon"></div>
-                    <div class="precipitation2_chance">10%</div>
+                    <div class="precipitation2_chance">{{forecast[3].precip}}%</div>
                 </div>
                 <div class="detail3">
                     <div class="high_forecast">
                         <div class="high">High</div>
-                        <div class="high_number">-1°</div>
+                        <div class="high_number">{{forecast[3].max_temp}}°</div>
                     </div>
                     <div class="humidity_forecast">
                         <div class="humidity">Humidity</div>
-                        <div class="humidity_number">5%</div>
+                        <div class="humidity_number">{{forecast[3].humidity}}%</div>
                     </div>
                     <div class="low_forecast">
                         <div class="low">High</div>
-                        <div class="low_number">-10°</div>
+                        <div class="low_number">{{forecast[3].min_temp}}°</div>
                     </div>
                 </div>
             </div>
@@ -134,52 +138,52 @@
             <div class="title2">Hourly</div>
             <div class="hourly_grid">
                 <div class="hour1">
-                    <div class="icon icon_01n"></div>
-                    <div class="description">Clear</div>
-                    <div class="time">12AM</div>
-                    <div class="temperature">15°</div>
+                    <div class="icon icon_01n">{{hourly[1].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="description">{{hourly[1].shortForecast}}</div>
+                    <div class="time">{{hourly[1].time}}</div>
+                    <div class="temperature">{{hourly[1].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">10%</div>
+                    <div class="precipitation3_chance">{{hourly[1].precip}}%</div>
                 </div>
                 <div class="hour4">
-                    <div class="icon icon_01n"></div>
-                    <div class="description">Clear</div>
-                    <div class="time">4AM</div>
-                    <div class="temperature">17°</div>
+                    <div class="icon icon_01n">{{hourly[4].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="description">{{hourly[4].shortForecast}}</div>
+                    <div class="time">{{hourly[4].time}}</div>
+                    <div class="temperature">{{hourly[4].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">10%</div>
+                    <div class="precipitation3_chance">{{hourly[4].precip}}%</div>
                 </div>
                 <div class="hour8">
-                    <div class="icon icon_01d"></div>
-                    <div class="description">Clear</div>
-                    <div class="time">8AM</div>
-                    <div class="temperature">20°</div>
+                    <div class="icon icon_01d">{{hourly[8].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="description">{{hourly[8].shortForecast}}</div>
+                    <div class="time">{{hourly[8].time}}</div>
+                    <div class="temperature">{{hourly[8].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">10%</div>
+                    <div class="precipitation3_chance">{{hourly[8].precip}}%</div>
                 </div>
                 <div class="hour12">
-                    <div class="icon icon_01d"></div>
-                    <div class="description">Clear</div>
-                    <div class="time">12PM</div>
-                    <div class="temperature">24°</div>
+                    <div class="icon icon_01d">{{hourly[12].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="description">{{hourly[12].shortForecast}}</div>
+                    <div class="time">{{hourly[12].time}}</div>
+                    <div class="temperature">{{hourly[12].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">10%</div>
+                    <div class="precipitation3_chance">{{hourly[12].precip}}%</div>
                 </div>
                 <div class="hour16">
-                    <div class="icon icon_01d"></div>
-                    <div class="description">Clear</div>
-                    <div class="time">4PM</div>
-                    <div class="temperature">25°</div>
+                    <div class="icon icon_01d">{{hourly[16].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="description">{{hourly[16].shortForecast}}</div>
+                    <div class="time">{{hourly[16].time}}</div>
+                    <div class="temperature">{{hourly[16].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">10%</div>
+                    <div class="precipitation3_chance">{{hourly[16].precip}}%</div>
                 </div>
                 <div class="hour20">
-                    <div class="icon icon_01n"></div>
-                    <div class="description">Clear</div>
-                    <div class="time">8PM</div>
-                    <div class="temperature">18°</div>
+                    <div class="icon icon_01n">{{hourly[20].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="description">{{hourly[20].shortForecast}}</div>
+                    <div class="time">{{hourly[20].time}}</div>
+                    <div class="temperature">{{hourly[20].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">10%</div>
+                    <div class="precipitation3_chance">{{hourly[20].precip}}%</div>
                 </div>
             </div>
         </div>

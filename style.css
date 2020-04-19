@@ -134,15 +134,6 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 
-.icon_01d {
-    background-color: white;
-    width: 16vw;
-    height: 310px;
-    grid-column: 5/6;
-    grid-row: 1/2;
-    margin: auto;
-}
-
 .current_detail {
     width: 78vw;
     height: 101px;
@@ -313,13 +304,6 @@ input::-webkit-input-placeholder {
     grid-row: 2/3;
 }
 
-.icon_09d {
-    width: 81px;
-    height: 82px;
-    background-color: white;
-    margin: auto;
-}
-
 .description {
     font-size: 35px;
     font-family: montserrat,sans-serif;
@@ -332,7 +316,7 @@ input::-webkit-input-placeholder {
 .raindrop_icon {
     width: 21px;
     height: 21px;
-    background-color: white;
+    background-color: none;
     transform: rotate(45deg);
     margin: auto;
     position: relative;
@@ -383,13 +367,6 @@ input::-webkit-input-placeholder {
     grid-row: 1fr;
 }
 
-.icon_03d {
-    width: 81px;
-    height: 82px;
-    background-color: white;
-    margin: auto;
-}
-
 .day3_box {
     width: 26vw;
     height: 411px;
@@ -412,13 +389,6 @@ input::-webkit-input-placeholder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr;
-}
-
-.icon_13d {
-    width: 81px;
-    height: 82px;
-    background-color: white;
-    margin: auto;
 }
 
 .hourly_box {
@@ -455,7 +425,7 @@ input::-webkit-input-placeholder {
 .icon_01n {
     width: 81px;
     height: 82px;
-    background-color: white;
+    background-color: none;
     margin: auto;
 }
 
@@ -486,3 +456,94 @@ input::-webkit-input-placeholder {
     margin: auto;
 }
 
+.icon_01d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 16vw;
+    height: 310px;
+    grid-column: 5/6;
+    grid-row: 1/2;
+    margin: auto;
+  }
+  
+  .icon_02d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_03d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_04d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_09d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_10d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_11d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_13d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
+  
+  .icon_50d {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 81px;
+    height: 82px;
+    margin: auto;
+  }
