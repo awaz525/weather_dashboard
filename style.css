@@ -382,7 +382,7 @@ input::-webkit-input-placeholder {
     margin-top: 20px;
 
     display: grid;
-    grid-template-columns: 65px 1fr 1fr 1fr;
+    grid-template-columns: 65px 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -407,6 +407,7 @@ input::-webkit-input-placeholder {
     width: 19vw;
     height: 145px;
     background-color: #002F36;
+    margin: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -416,6 +417,7 @@ input::-webkit-input-placeholder {
     width: 19vw;
     height: 145px;
     background-color: #002F36;
+    margin: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -425,6 +427,7 @@ input::-webkit-input-placeholder {
     width: 19vw;
     height: 145px;
     background-color: #002F36;
+    margin: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -434,6 +437,7 @@ input::-webkit-input-placeholder {
     width: 19vw;
     height: 145px;
     background-color: #002F36;
+    margin: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -443,6 +447,7 @@ input::-webkit-input-placeholder {
     width: 19vw;
     height: 145px;
     background-color: #002F36;
+    margin: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -452,6 +457,7 @@ input::-webkit-input-placeholder {
     width: 19vw;
     height: 145px;
     background-color: #002F36;
+    margin: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -613,4 +619,328 @@ input::-webkit-input-placeholder {
     grid-column: 5/6;
     grid-row: 1/2;
     margin: auto;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+      
+    }
+
+    .hourly_box {
+        width: 87vw;
+        height: 530px;
+        margin: auto;
+        margin-top: 20px;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 65px 1fr;
+    }
+
+    .hourly_grid {
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .hour1 {
+        width: 37vw;
+        height: 150px;
+        background-color: #002F36;
+        margin: 5px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .hour4 {
+        width: 37vw;
+        height: 150px;
+        background-color: #002F36;
+        margin: 5px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .hour8 {
+        width: 37vw;
+        height: 150px;
+        background-color: #002F36;
+        margin: 5px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .hour12 {
+        width: 37vw;
+        height: 150px;
+        background-color: #002F36;
+        margin: 5px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .hour16 {
+        width: 37vw;
+        height: 150px;
+        background-color: #002F36;
+        margin: 5px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .hour20 {
+        width: 37vw;
+        height: 150px;
+        background-color: #002F36;
+        margin: 5px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .title1 {
+        transform: rotate(0deg);
+    }
+
+    .title2 {
+        transform: rotate(0deg);
+    }
+
+    .daily_box {
+        width: 100vw;
+        height: 690px;
+        margin: auto;
+        margin-top: 30px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 65px 1fr 1fr;
+    }
+
+    .day1_box {
+        width: 49vw;
+        height: 315px;
+        background-color: #002F36;
+        border-width: 1px;
+        border-color: white;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .day2_box {
+        width: 49vw;
+        height: 315px;
+        background-color: #002F36;
+        border-width: 1px;
+        border-color: white;
+        grid-row: 2/3;
+        grid-column: 2/3;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .day3_box {
+        width: 49vw;
+        height: 315px;
+        background-color: #002F36;
+        border-width: 1px;
+        border-color: white;
+        grid-row: 3/4;
+        grid-column: 1/2;
+        margin-top: 10px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .detail1 {
+        margin: auto;
+    }
+
+    .detail2 {
+        margin: auto;
+    }
+
+    .detail3 {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+       
+    }
+
+
+
+    .hourly_box {
+        width: 94vw;
+        height: 350px;
+        margin: auto;
+        margin-top: 20px;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 65px 1fr;
+    }
+
+    .hourly_grid {
+        width: 94vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .hour1 {
+        width: 30vw;
+        height: 141px;
+        background-color: #002F36;
+        margin: 2px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .hour4 {
+        width: 30vw;
+        height: 141px;
+        background-color: #002F36;
+        margin: 2px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .hour8 {
+        width: 30vw;
+        height: 141px;
+        background-color: #002F36;
+        margin: 2px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .hour12 {
+        width: 30vw;
+        height: 141px;
+        background-color: #002F36;
+        margin: 2px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .hour16 {
+        width: 30vw;
+        height: 141px;
+        background-color: #002F36;
+        margin: 2px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .hour20 {
+        width: 30vw;
+        height: 141px;
+        background-color: #002F36;
+        margin: 2px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .title1 {
+        transform: rotate(0deg);
+    }
+
+    .title2 {
+        transform: rotate(0deg);
+    }
+
+    .daily_box {
+        width: 93vw;
+        height: 335px;
+        margin: auto;
+        margin-top: 30px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 65px 1fr 1fr;
+    }
+
+    .day1_box {
+        width: 45vw;
+        height: 130px;
+        background-color: #002F36;
+        border-width: 1px;
+        border-color: white;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .day2_box {
+        width: 45vw;
+        height: 130px;
+        background-color: #002F36;
+        border-width: 1px;
+        border-color: white;
+        grid-row: 2/3;
+        grid-column: 2/3;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .day3_box {
+        width: 45vw;
+        height: 130px;
+        background-color: #002F36;
+        border-width: 1px;
+        border-color: white;
+        grid-row: 3/4;
+        grid-column: 1/2;
+        margin-top: 10px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .detail1 {
+        margin: auto;
+    }
+
+    .detail2 {
+        margin: auto;
+    }
+
+    .detail3 {
+        margin: auto;
+    }
 }

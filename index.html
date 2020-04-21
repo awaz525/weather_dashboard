@@ -137,7 +137,7 @@
             <div class="title2">Hourly</div>
             <div class="hourly_grid">
                 <div class="hour1">
-                    <div class="icon icon_01n">{{hourly[1].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="icon icon_01n">{{hourly[1].isDaytime ? '' : '' }}</div>
                     <div class="description">{{hourly[1].shortForecast}}</div>
                     <div class="time">{{hourly[1].time}}</div>
                     <div class="temperature">{{hourly[1].temperature}}°</div>
@@ -145,44 +145,44 @@
                     <div class="precipitation3_chance">{{hourly[1].precip}}%</div>
                 </div>
                 <div class="hour4">
-                    <div class="icon icon_01n">{{hourly[4].isDaytime ? 'Day' : 'Night' }}</div>
+                    <div class="icon icon_01n">{{hourly[2].isDaytime ? '' : '' }}</div>
+                    <div class="description">{{hourly[2].shortForecast}}</div>
+                    <div class="time">{{hourly[2].time}}</div>
+                    <div class="temperature">{{hourly[2].temperature}}°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">{{hourly[2].precip}}%</div>
+                </div>
+                <div class="hour8">
+                    <div class="icon icon_01d">{{hourly[3].isDaytime ? '' : '' }}</div>
+                    <div class="description">{{hourly[3].shortForecast}}</div>
+                    <div class="time">{{hourly[3].time}}</div>
+                    <div class="temperature">{{hourly[3].temperature}}°</div>
+                    <div class="raindrop_icon2"></div>
+                    <div class="precipitation3_chance">{{hourly[3].precip}}%</div>
+                </div>
+                <div class="hour12">
+                    <div class="icon icon_01d">{{hourly[4].isDaytime ? '' : '' }}</div>
                     <div class="description">{{hourly[4].shortForecast}}</div>
                     <div class="time">{{hourly[4].time}}</div>
                     <div class="temperature">{{hourly[4].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
                     <div class="precipitation3_chance">{{hourly[4].precip}}%</div>
                 </div>
-                <div class="hour8">
-                    <div class="icon icon_01d">{{hourly[8].isDaytime ? 'Day' : 'Night' }}</div>
-                    <div class="description">{{hourly[8].shortForecast}}</div>
-                    <div class="time">{{hourly[8].time}}</div>
-                    <div class="temperature">{{hourly[8].temperature}}°</div>
-                    <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">{{hourly[8].precip}}%</div>
-                </div>
-                <div class="hour12">
-                    <div class="icon icon_01d">{{hourly[12].isDaytime ? 'Day' : 'Night' }}</div>
-                    <div class="description">{{hourly[12].shortForecast}}</div>
-                    <div class="time">{{hourly[12].time}}</div>
-                    <div class="temperature">{{hourly[12].temperature}}°</div>
-                    <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">{{hourly[12].precip}}%</div>
-                </div>
                 <div class="hour16">
-                    <div class="icon icon_01d">{{hourly[16].isDaytime ? 'Day' : 'Night' }}</div>
-                    <div class="description">{{hourly[16].shortForecast}}</div>
-                    <div class="time">{{hourly[16].time}}</div>
-                    <div class="temperature">{{hourly[16].temperature}}°</div>
+                    <div class="icon icon_01d">{{hourly[5].isDaytime ? '' : '' }}</div>
+                    <div class="description">{{hourly[5].shortForecast}}</div>
+                    <div class="time">{{hourly[5].time}}</div>
+                    <div class="temperature">{{hourly[5].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">{{hourly[16].precip}}%</div>
+                    <div class="precipitation3_chance">{{hourly[5].precip}}%</div>
                 </div>
                 <div class="hour20">
-                    <div class="icon icon_01n">{{hourly[20].isDaytime ? 'Day' : 'Night' }}</div>
-                    <div class="description">{{hourly[20].shortForecast}}</div>
-                    <div class="time">{{hourly[20].time}}</div>
-                    <div class="temperature">{{hourly[20].temperature}}°</div>
+                    <div class="icon icon_01n">{{hourly[6].isDaytime ? '' : '' }}</div>
+                    <div class="description">{{hourly[6].shortForecast}}</div>
+                    <div class="time">{{hourly[6].time}}</div>
+                    <div class="temperature">{{hourly[6].temperature}}°</div>
                     <div class="raindrop_icon2"></div>
-                    <div class="precipitation3_chance">{{hourly[20].precip}}%</div>
+                    <div class="precipitation3_chance">{{hourly[6].precip}}%</div>
                 </div>
             </div>
         </div>
